@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/anymote.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/bcprov-jdk15-143.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/polo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/protobuf-java-2.2.0-lite.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jmdns-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/json-simple-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

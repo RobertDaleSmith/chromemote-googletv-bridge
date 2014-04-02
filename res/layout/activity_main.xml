@@ -1,0 +1,203 @@
+<!--
+     Copyright (C) 2012 ENTERTAILION LLC.  All rights reserved.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity" >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingTop="10px">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="600dp"
+                android:layout_height="fill_parent"
+                android:gravity="left|top"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dp"
+                    android:paddingTop="30dp"
+                    android:paddingLeft="30dp">
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:id="@+id/imageView"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon" />
+
+                    <com.motelabs.chromemote.bridge.CustomText
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Anymote Bridge"
+                        android:id="@+id/textView"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="50dp"
+                        android:textColor="#f9f9f9"
+                        android:singleLine="true"
+                        android:fontFamily="Roboto-Thin-webfont.ttf"
+                        android:gravity="bottom" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="220dp">
+
+                        <com.motelabs.chromemote.bridge.CustomText
+                            android:id="@+id/ipAddressTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:layout_weight="1"
+                            android:text="0.0.0.0"
+                            android:textSize="32dip"
+                            android:textColor="#f9f9f9"
+                            android:singleLine="true"
+                            android:fontFamily="Roboto-Thin-webfont.ttf"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginBottom="5dp" />
+
+                        <com.motelabs.chromemote.bridge.CustomText
+                            android:id="@+id/serviceStatusTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:layout_weight="1"
+                            android:text="ACTIVE"
+                            android:textSize="32dip"
+                            android:textColor="#f9f9f9"
+                            android:singleLine="false"
+                            android:fontFamily="Roboto-Bold-webfont.ttf"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginBottom="15dp" />
+
+                        <ImageButton android:id="@+id/toggleServiceButton"
+                            android:layout_width="230dp"
+                            android:layout_height="50dp"
+                            android:text="DISABLE"
+                            android:layout_gravity="center_horizontal|left"
+                            android:onClick="toggleServiceEnabled"
+                            android:width="280px"
+                            android:layout_marginBottom="50dp"
+                            android:layout_marginLeft="45dp"
+                            android:background="@drawable/toggled_on_btn"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:gravity="right">
+
+
+                    <ImageButton android:id="@+id/closeButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="Close"
+                        android:layout_gravity="center_horizontal|right"
+                        android:onClick="closeEvent"
+
+                        android:layout_marginTop="35dp"
+                        android:layout_marginRight="45dp"
+                        android:background="@drawable/close_ui_button"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="80dp"
+                        android:gravity="right|bottom"
+                        android:layout_gravity="bottom"
+                        android:textAlignment="textEnd"
+                        android:paddingBottom="20px"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageView
+                            android:layout_width="220dp"
+                            android:layout_height="32dp"
+                            android:id="@+id/logo"
+                            android:src="@drawable/logo"
+                            android:paddingRight="45dp" />
+
+                        <com.motelabs.chromemote.bridge.CustomText
+                            android:id="@+id/ipAddressTextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="20dp"
+                            android:gravity="center|right"
+                            android:layout_weight="1"
+                            android:text="Download remote at Chromemote.com"
+                            android:textSize="12dip"
+                            android:textColor="#f9f9f9"
+                            android:singleLine="false"
+                            android:fontFamily="Roboto-Regula-webfont.ttf"
+                            android:paddingRight="45dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

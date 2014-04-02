@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="50dp" android:layout_width="230dp">
+    <item android:state_focused="true" android:drawable="@drawable/toggled_off_focused"/>
+    <item android:state_pressed="true" android:drawable="@drawable/toggled_off_focused" />
+    <item android:drawable="@drawable/toggled_off" />  //means normal
+</selector>

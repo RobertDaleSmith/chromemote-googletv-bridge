@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>GoogleTV Remote Web Server</title>
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+	Welcome to GoogleTV Remote Web Server
+
+    <br><br>
+    <button onclick="discoverDevices();">discoverDevices</button>
+    <button onclick="isDiscovering();">isDiscovering</button>
+    <button onclick="getDeviceList();">getDeviceList</button>
+
+    <br><br>
+    <input type="input" id="ip_address_box">
+    <button onclick="connectDevice(document.getElementById('ip_address_box').value);">connectDevice</button>
+    <button onclick="isConnectingNow();">isConnectingNow</button>
+    <button onclick="isAwaitingPin();">isAwaitingPin</button>
+
+
+    <br><br>
+    <input type="input" id="pin_input_box">
+    <button onclick="sendPairCode(document.getElementById('pin_input_box').value);">sendPairCode</button>
+    <button onclick="cancelPairCode();">cancelPairCode</button>
+    <button onclick="connectSuccessOrFail();">connectSuccessOrFail</button>
+
+    <br><br>
+    <input type="input" id="keycode_input_box">
+    <button onclick="sendKeyCode(document.getElementById('keycode_input_box').value);">sendKeyCode</button>
+
+    <br><br>
+    <button onclick="sendKeyCode('KEYCODE_STB_POWER');">KEYCODE_STB_POWER</button>
+    <button onclick="sendKeyCode('KEYCODE_AVR_POWER');">KEYCODE_AVR_POWER</button>
+    <button onclick="sendKeyCode('KEYCODE_HOME');">KEYCODE_HOME</button>
+    <button onclick="sendKeyCode('KEYCODE_BACK');">KEYCODE_BACK</button>
+
+    <br><br>
+    <input type="input" id="url_input_box">
+    <button onclick="fling(document.getElementById('url_input_box').value);">sendUrl</button>
+
+    <br><br>
+    <button onclick="fling('intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.google.tv.chrome/com.google.tv.chrome.HubActivity;end');">Chrome</button>
+    <button onclick="fling('intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.google.tv.netflix/com.google.tv.netflix.NetflixActivity;end');">Netflix</button>
+    <button onclick="fling('intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.twitter.android.tv/com.twitter.android.LoginActivity;end');">Twitter</button>
+</body>
+</html>
